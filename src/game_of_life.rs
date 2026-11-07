@@ -59,6 +59,24 @@ mod tests {
         assert!(next_state(false, 3));
     }
 
-    // TODO (student): write the remaining cases from your truth table before you
-    // write next_state. At minimum: a live cell with 4 neighbors, a dead cell with 2.
+    #[test]
+    fn live_4_dies() {
+	assert!(next_state(false, 4));
+    }
+    
+    #[test]
+    fn dead_2_dead() {
+	assert!(next_sstate(false, 2));
+    }
+	
+    #[test]
+    fn dead_0_dead() {
+	assert!(next_sstate(false, 0));
+    }
+
+    #[test]
+    fn alive_8_dead() {
+	assert!(next_sstate(false, 8));
+    }
+
 }
